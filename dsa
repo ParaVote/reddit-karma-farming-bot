@@ -1,0 +1,5 @@
+REDDIT_CLIENT_ID="n6Jh5zYcDmhaVg" \
+	-e REDDIT_SECRET="-0wj_r1YMo2zkgizh1r3n5TiyOApwA" \
+	-e REDDIT_USERNAME="SnooPickles1179" \
+	-e REDDIT_PASSWORD="|imMji:FA*38" \
+	-e REDDIT_USER_AGENT="script by /u/SnooPickles1179" \
