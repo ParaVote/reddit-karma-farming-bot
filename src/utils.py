@@ -21,13 +21,13 @@ import string
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DB_DIR = os.path.join(BASE_DIR, "brains")
 MAIN_DB = os.path.join(BASE_DIR, "brains/brain.db")
-MAIN_DB_MIN_SIZE = "50mb"
+MAIN_DB_MIN_SIZE = "100mb"
 MAIN_DB_MAX_SIZE = "300mb"
 #MAIN_DB = DB_DIR + "/brain.db"
 SCORE_THRESHOLD = 0  # downvote
 SUBREDDIT_THRESHOLD = 5000
 TOP_SUBREDDIT_NUM = 10  # number of subreddits to search for repost-able content
-MIN_SCORE = 0  # for posts to repost
+MIN_SCORE = 1000  # for posts to repost
 SUBMISSION_SEARCH_TEMPLATE = f"https://api.pushshift.io/reddit/search/submission/?before={{before}}&sort_type=score&mod_removed=false&user_removed=false&sort=desc&subreddit={{subreddit}}&score=>{SUBREDDIT_THRESHOLD}"
 DAY = 86400  # POSIX day (exact value)
 MINUTE = 60
@@ -39,7 +39,7 @@ PROBABILITIES = {
   "KARMACHECK" : 0.005,
   "LEARN": 0.02,
   "DELETE": 0.02 }
-COMMENTS_DISABLED = True
+COMMENTS_DISABLED = False
 MAX_CACHE_SIZE = 128
 NUMBER_DAYS_FOR_POST_TO_BE_OLD = 365
 SUBREDDIT_LIST = ["aww", "humor", "hilarious", "lol", "firstworldproblems", "bigdickproblems", "eatsandwiches", "shittyfoodporn", "food", "recipes", "steak", "dessert", "beerporn", "wine", "grilling", "nespresso", "foodporn", "kitchenconfidential", "alcohol", "beer", "pizza", "cocktails", "bon_appetit", "canning", "sushi", "grilledcheese", "dogs", "holdmycatnip", "hardcoreaww", "UnexpectedlyWholesome", "stoppedworking", "catswhoyell", "tippytaps", "eyebleach", "whatsWrongWithYourDog", "forbiddensnacks", "coffee", "baking", "foodhacks", "puppy101", "dogtraining", "pets", "dogpictures", "catsstandingup", "kittens", "husky", "catpictures", "teefies", "tuckedinkitties", "blep", "babybigcatgifs", "startledcats", "childrenfallingover", "aquariums", "woof_irl", "MEOW_IRL", "blursedimages", "sadcringe", "veganfoodporn", "smoking", "seriouseats", "tonightsdinner", "bakeoff", "stupidfood", "bigboobproblems", "nocontext", "politicalhumor", "punny", "puns", "lmao", "dirtyjokes", "cleanjokes", "demotivational", "funnysigns", "ecards", "antijokes", "fffffffuuuuuuuuuuuu", "rage", "ragecomics", "ragenovels", "trollXchromosomes", "birdswitharms", "catsinbusinessattire", "bearswithbeaks", "rule34", "confusedboners", "wheredidthesodago", "funnyvideos", "cringe", "combinedgifs", "retiredgif","freekarma4u", "awwducational", "funny", "jokes", "rarepuppers", "startledcats", "zoomies", "animalsbeingbros", "sneks", "emusrunningfromstuff", "babyelephantgifs", "seut", "partyparrot", "thecatdimension", "memes", "catloaf", "animalsbeingjerks", "naturelsfuckinglit", "memesirl", "memes_of_the_dank", "politicalhumor", "karma", "karmacourt", "karmaRX", "karmaconspiracy", "freekarma4you", "instantkarma", "wholesomememes", "dankmemes", "raimimemes", "historymemes", "lastimages", "okbuddyretard", "comedyheaven", "pewdiepiesubmissions", "karmawhore","instantregret","nextfuckinglevel","awfuleverything","cringepics","ConvenientCop","HistoryPorn","Wellthatsucks","unpopularopinion","HighQualityGifs","facepalm","youseeingthisshit","BeAmazed","dontyouknowwhoiam","ThatLookedExpensive","perfectlycutscreams","MadeMeSmile","shittylifeprotips","karmamains","shitpost","upvote","teenagers","getfreekarmaanytime","karmaexchange","reactiongifs","mildlyinfuriating","animemes","defreekarma","specialsnowflake","showerthoughts","teenagersnew","defreekarmaNSFW","shitpostcrusaders","get_karma_fast","notinteresting","morefreekarma4u","cringetopia","karmaroulette","freekarma4all","freekarmasub4sub","shittysuperpowers","freekarmasubreddit","karmabooster","mildlyinteresting","subredditsimulator","freekarma4UandMe","givemekarma","easykarma","karmaproduction","deepfriedmemes","therewasanattempt","karmastarcraft","publicfreakout","karmasquad","bestof","rule34LoL","entitledparents","idiotsincars","freeupvotes","carporn","upvotegifs","karmaforkarma","thathappened","untrustworthypoptarts","HistoryAnimemes"] # limit learning and posting to these subreddits. Empty = Random
